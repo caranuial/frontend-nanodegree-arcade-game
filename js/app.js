@@ -2,7 +2,7 @@
 var Score = function(){
 	this.text = 'Score: ';
 	this.value = 0;
-}
+};
 
 // function to draw a score on the screen
 Score.prototype.render = function(){
@@ -10,7 +10,7 @@ Score.prototype.render = function(){
 	ctx.fillStyle= 'white';
 	ctx.textAlign='left';
 	ctx.fillText(this.text + this.value.toString(), 380, 75 );
-}
+};
 
 //Collectibles
 var Collectible = function() {
@@ -22,7 +22,7 @@ var Collectible = function() {
 	this.line = this.genLine();
 	this.y = lanes[this.line];
 	console.log("Collectible y " + this.y + ", x " + this.x + ", line " + this.line);
-}
+};
 
 //Function to generate color of a gem
 Collectible.prototype.genGemColor = function()	{
@@ -37,7 +37,7 @@ Collectible.prototype.genGemColor = function()	{
 	else{
 		return 'images/Gem Orange.png';
 	}
-}
+};
 
 //Function to generate line on which gem is placed
 Collectible.prototype.genLine = function() {
@@ -103,7 +103,7 @@ var Enemy = function() {
 	this.y = lanes[this.line];
 	//generate speed of enemy
 	this.velocity = this.genSpeed();
-}
+};
 
 //Function to generate line on which enemy starts
 Enemy.prototype.genLine = function() {
@@ -115,7 +115,7 @@ Enemy.prototype.genLine = function() {
 //Function to generate speed of enemy
 Enemy.prototype.genSpeed = function() {
 	return Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed;
-}
+};
 
 
 // Update the enemy's position, required method for game
@@ -143,12 +143,12 @@ Enemy.prototype.update = function(dt) {
 		player.y = 400;
 		player.line = 4;
 	}
-}
+};
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 // Now write your own player class
 // This class requires an update(), render() and
@@ -159,7 +159,7 @@ var Player = function() {
 	this.x = 202;
 	this.y = 400;
 	this.line = 4;
-}
+};
 // Update the player's image based on score
 Player.prototype.update = function(dt) {
 	if (score.value >= 20 ){
