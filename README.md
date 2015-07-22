@@ -9,9 +9,15 @@ for self-checking their submission.
 Instructions
 ===============================
 To run the game start web virtual machine and open index.html.
+
 You are thrown right into the game. 
+
 Move using arrow keys.
+
 Collect gems.
+
 Avoid evil ladybirds that are hungry for your flash.
+
 Score as high as posible 
+
 Enjoy :)
